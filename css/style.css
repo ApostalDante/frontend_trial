@@ -98,17 +98,21 @@ body._lock {
 }
 
 .header {
-    /*position: sticky;
-    top: 0;*/
-    /* так нет*/
-    /* position: fixed; - пока так работает
+    position: sticky;
     top: 0;
-    left: 0;*/
+    /* так нет*/
+    /*position: fixed;*/
+    /*- пока так работает*/
+    /*  top: 0;*/
+    /*left: 0;*/
     width: 100%;
     z-index: 10;
     /* min-height: 21.25rem;*/
     /*background-color: red;*/
-    /*border: 1px solid #000;*/
+    /*padding: 0rem 0rem 3rem 0rem;*/
+    /* margin: 0rem 0rem 3rem 0rem;*/
+    /*border: 1px solid red;*/
+    margin: 0 auto;
 }
 
 .hide {
@@ -117,6 +121,7 @@ body._lock {
 }
 
 .header__container {
+    max-width: 72.5rem;
     /*border: 1px solid #000;*/
     /*max-width: 1920px;*/
     /*min-height: 140px;*/
@@ -124,7 +129,7 @@ body._lock {
     background: #FFFFFF;
     /**/
     /* max-width: 1200px;*/
-    /* margin: 0 auto;*/
+    margin: 0 auto;
     display: flex;
     /*padding: 0px 30px;  зачем-то нужен*/
     align-items: center;
@@ -170,6 +175,10 @@ body._lock {
 
 .header__logo_search {}
 
+
+
+
+
 .header__menu {}
 
 .menu {}
@@ -187,11 +196,16 @@ body._lock {
     align-items: center;*/
 }
 
+.menu__list li {
+    margin: 1.34rem 2.84rem 0rem 1.25rem;
+}
+
 .menu__list>li {
     position: relative;
     /* margin: 21px 0px 0px 20px;*/
-    margin: 1.34rem 0rem 0rem 1.25rem;
+    /* margin: 1.34rem 2.84rem 0rem 1.25rem;*/
     /*border: 1px solid red;*/
+    /* margin: 0rem 2.84rem;*/
 }
 
 .menu__link {
@@ -209,7 +223,7 @@ body._lock {
 .menu__sub_list {
     position: absolute;
     top: 100%;
-    right: 0;
+    right: 1;
     background-color: #FFFFFF;
     /*padding: 15px;*/
     padding: 0.93rem;
@@ -221,6 +235,7 @@ body._lock {
 .menu__sub_list li {
     /* margin: 0px 0px 10px 0px;*/
     margin: 0rem 0rem 0.62rem 0rem;
+    border-bottom: 1px solid #E9E9E9;
 
 }
 
@@ -241,6 +256,7 @@ body._lock {
 }
 
 .menu__sub_link {
+
     color: #000000;
     /* color: #fff;*/
     /*border-bottom: 1px solid red;*/
@@ -333,7 +349,7 @@ body._touch .menu__list>li._active .menu__arrow {
 /*--------------------*/
 
 .content {
-    padding: -12.5rem 0rem 0rem 0rem;
+    /* padding: -12.5rem 0rem 0rem 0rem;*/
     /*  width: 1920px;*/
     /* width: 120rem;*/
     margin: 3rem 0rem;
@@ -437,7 +453,7 @@ body._touch .menu__list>li._active .menu__arrow {
 }
 
 /*-------------------------------*/
-@media (min-width: 820px) {
+@media (min-width: 821px) {
     .menu__list {
         display: flex;
         align-items: center;
@@ -457,13 +473,90 @@ body._touch .menu__list>li._active .menu__arrow {
 }
 
 @media (max-width: 820px) {
+    /*-------------------------*/
 
-    .container_column_line {
-        display: flex;
-        width: 50rem;
-        flex-wrap: wrap;
+    /*правильное расположение*/
+
+    .header {
+        /* position: sticky;
+        top: 0;*/
+        /* так нет*/
+        position: fixed;
+        width: 100%;
+        /*position: static;*/
+        /*- пока так работает*/
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* z-index: 5;*/
+        /* min-height: 21.25rem;*/
+        /*background-color: red;*/
+        /*padding: 0rem 0rem 3rem 0rem;*/
+        /* margin: 0rem 0rem 3rem 0rem;*/
     }
 
+    .header__container {
+
+        /* position: fixed;*/
+        width: 100%;
+        /* top: 0;*/
+        /*padding: 0rem 0rem 0rem 1rem;*/
+        /* min-height: 8.75rem;*/
+        background: #FFFFFF;
+        /**/
+        /* max-width: 1200px;*/
+        /*margin: 0 auto;*/
+        display: flex;
+        /*padding: 0px 30px;  зачем-то нужен*/
+        justify-content: space-between;
+        /*align-items: center;*/
+        flex-direction: row;
+        /*justify-content: center;*/
+        /* min-height: 81px;*/
+        min-height: 5.06rem;
+        /* max-height: 5.09rem;*/
+        /**/
+        /* border: 1px solid red;*/
+        /*border: 1px solid #E9E9E9;*/
+        border-bottom: 1px solid #E9E9E9;
+        align-items: center;
+    }
+
+    .header__logo {
+        /* border: 1px solid red;*/
+        margin: 0rem 0rem 0rem 1.87rem;
+        /* padding: 0px 0px 0px 0px;*/
+        /*margin: 0 auto;*/
+
+    }
+
+    .header__logo_logo {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .header__line {
+        display: none;
+    }
+
+    .header__line_two {
+        display: none;
+    }
+
+    .menu {
+        /* position: sticky;*/
+        /* top: 30px;
+        right: 0px;*/
+        /* padding: 0rem 1.93rem, 0rem 0rem;*/
+        /*margin: 0rem 1.93rem, 0rem 0rem;*/
+        /* border: 1px solid red;*/
+        /*margin: 0 auto;*/
+    }
+
+    .header__logo_search {
+        display: none;
+    }
+
+    /*------------------------------*/
     .menu__icon {
         z-index: 5;
         display: block;
@@ -522,7 +615,7 @@ body._touch .menu__list>li._active .menu__arrow {
         left: -100%;
         width: 100%;
         height: 100%;
-        /*background-color: rgba(0, 0, 0, 0.9);*/
+        background-color: #FFFFFF;
         padding: 100px 30px 30px 30px;
         /* padding: 1rem, 0.5rem, 0.5rem, 0.5rem;*/
         transition: left 0.3s ease 0s;
@@ -534,7 +627,7 @@ body._touch .menu__list>li._active .menu__arrow {
     }
 
     /*Возможно не понадобится */
-    .menu__body::before {
+    /*.menu__body::before {
         content: "";
         position: fixed;
         width: 100%;
@@ -542,7 +635,7 @@ body._touch .menu__list>li._active .menu__arrow {
         left: 0;
         height: 4.37rem;
         z-index: 2;
-    }
+    }*/
 
     .menu__list>li {
         flex-wrap: wrap;
@@ -569,6 +662,13 @@ body._touch .menu__list>li._active .menu__arrow {
 
     .menu__sub_link {
         font-size: 2rem;
+    }
+
+    .container_column_line {
+        margin: 6rem 0rem 0rem 0rem;
+        display: flex;
+        width: 50rem;
+        flex-wrap: wrap;
     }
 }
 
